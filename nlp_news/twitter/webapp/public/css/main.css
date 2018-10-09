@@ -1,0 +1,10 @@
+/*
+height is specified so multiple charts do not overlap
+width is not specified so that chart can resize
+*/
+.chartContainer {
+	font: 10px sans-serif;
+	margin: 0px auto 22px;
+	clear: both; /* width: 960px; */
+	height: 300px; 
+}

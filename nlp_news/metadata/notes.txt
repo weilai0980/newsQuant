@@ -1,0 +1,30 @@
+'''
+
+Tools:
+
+NLTK Tutorial: http://www.nltk.org/book/
+
+Spacy Quickstart: https://spacy.io/usage/
+
+Textblob Quickstart: http://textblob.readthedocs.io/en/dev/quickstart.html
+
+PATTERN.en https://www.clips.uantwerpen.be/pages/pattern-en#parser
+
+Feedparser: to parse RSS feeds 
+
+BeautifulSoup: to parse the structure of web pages
+   e.g. https://www.dataquest.io/blog/web-scraping-tutorial-python/
+   
+Newspaper: article scraping & curation
+   e.g. https://github.com/holwech/NewsScraper/blob/master/NewsScraper.py
+
+
+RSS feeds:
+
+https://blog.feedspot.com/cryptocurrency_rss_feeds/
+
+https://cryptocurrencynews.com/rss-feed/
+
+https://www.coindesk.com/contact-us/
+
+'''

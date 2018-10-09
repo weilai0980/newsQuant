@@ -1,0 +1,278 @@
+---- POINTS
+
+Lasso
+AdaBoost 
+equal constraint optimization
+
+LDA
+Probabilistic matrix factorization
+
+EM
+MCMC
+
+Monte carlos: importance sampling, MCMC, sequential/partical MCMC, bootstrap
+
+J Nocedal: numeral optimization
+
+Boyd: 2011 tutorial paper about ADMM
+
+
+---- 
+
+quantile regression
+
+ordinal regression 
+
+earth mover distance 
+
+
+---- Graph neural network
+
+https://tkipf.github.io/graph-convolutional-networks/
+
+
+---- Academic job 
+
+https://kassemfawaz.com/publication.html
+
+
+---- [research] Causal inference:
+
+https://causalinference.gitlab.io/icwsm-tutorial/intro.html
+
+https://drive.google.com/file/d/0BwF-hgLDpCD6TlR0WFg5dG5SLUU/view
+
+https://causalinference.gitlab.io/dowhy/do_why_estimation_methods.html
+
+
+---- [research] Reinforcement learning: tradingBot
+
+    https://www.youtube.com/watch?v=hYw_qhLUE0o
+
+
+
+---- temporal point process
+
+http://learning.mpi-sws.org/tpp-icml18/
+
+---- AutoML
+
+https://speakerdeck.com/tmls/keras-by-keisuke-kamataki-tmls-number-2?slide=6
+
+https://www.iro.umontreal.ca/~bengioy/cifar/NCAP2014-summerschool/slides/Ryan_adams_140814_bayesopt_ncap.pdf
+
+https://dhnzl.files.wordpress.com/2016/12/fuzzymad2016_bo_pdf.pdf
+
+---- Adversarial learning
+
+     order book
+
+
+
+
+
+---- Transfer learning, one short learning, multi-task learning 
+
+     sentiment transfer learning,  cross-domain sentiment
+
+---- Multi-view learning
+
+
+---- NLP:
+
+Paper: http://ruder.io/publications/
+
+
+https://www.ipht.fr/Meetings/BegRohu2018/index.html
+
+https://bitbucket.org/matheusaraujo/sentimental-analysis-methods/src/master/
+
+https://github.com/oxford-cs-deepnlp-2017/lectures
+
+http://web.stanford.edu/class/cs224n/syllabus.html
+
+http://web.stanford.edu/~jurafsky/slp3/
+
+
+
+-- Pipeline
+
+  sentence segmentation
+  tokenization
+  part of speech tagging
+  lemmatization/ stemming
+  stop words
+  dependency parsing
+  noun phases
+  NER
+  coreference resolution
+  
+
+-- Labeling:  NER, POS, Chunking
+
+  https://github.com/Franck-Dernoncourt/NeuroNER
+  
+  https://github.com/Hironsan/anago
+
+  https://github.com/UKPLab/emnlp2017-bilstm-cnn-crf
+
+
+  Gensim
+
+  NLTK
+
+-- Apsect terms
+
+
+-- Entity 
+
+
+relation
+  
+https://github.com/thunlp/OpenNRE
+
+https://github.com/davidsbatista/Annotated-Semantic-Relationships-Datasets
+
+
+coreference
+
+https://medium.com/huggingface/state-of-the-art-neural-coreference-resolution-for-chatbots-3302365dcf30
+https://huggingface.co/coref/
+
+
+resolution
+
+
+linking, disambiguigate
+
+https://github.com/yahoo/FEL
+
+http://ejmeij.github.io/entity-linking-and-retrieval-tutorial/
+
+https://www.youtube.com/watch?v=CBvE3BNErgE
+
+https://tac.nist.gov//2013/KBP/data.html
+
+
+--Text summarization
+
+
+
+--Keyphrase extraction
+
+  https://github.com/boudinfl/pke#implemented-models
+
+
+
+-- Subject extraction
+
+
+
+-- Classification: Sentiment
+
+https://github.com/laugustyniak/awesome-sentiment-analysis
+
+https://blog.paralleldots.com/data-science/breakthrough-research-papers-and-models-for-sentiment-analysis/
+
+https://machinelearningmastery.com/deep-learning-bag-of-words-model-sentiment-analysis/
+
+https://charlesashby.github.io/2017/06/05/sentiment-analysis-with-char-lstm/
+
+
+-- Sentiment / opinion
+
+
+
+
+
+-- Embedding:  
+
+character embedding, word embedding, sentence embedding (from martin), document embedding  
+
+https://github.com/RaRe-Technologies/gensim/blob/develop/docs/notebooks/doc2vec-IMDB.ipynb
+
+References of implemented algorithms:
+- Attention is all you need (2017)
+- Attentive Convolution (2018)
+- Bidirectional Attention Flow for Machine Comprehension (2016)
+- Baseline Needs More Love: On Simple Word-Embedding-Based Models and Associated Pooling Mechanisms (2018)
+- A Convolutional Encoder Model for Neural Machine Translation (2016)
+- Cross-stitch Networks for Multi-task Learning (2016)
+- An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling (2018)
+
+
+https://towardsdatascience.com/how-to-create-data-products-that-are-magical-using-sequence-to-sequence-models-703f86a231f8
+
+
+  
+-- Representation learning
+
+  Matirx factorization: initialize set of representation vectors
+  
+  Neural matrix factorization: representation vectors are parameterized by dense layers over input vector 
+
+
+-- Knowledge base
+
+  https://en.wikipedia.org/wiki/DBpedia
+
+
+-- Knowledge Graph 
+
+http://usc-isi-i2.github.io/ISWC17/
+
+https://kgtutorial.github.io/
+
+https://kgtutorial.github.io/wsdm-slides/Part4_kg-embeddings.pdf
+
+http://sumitbhatia.net/source/knowledge-graph-tutorial.html
+
+https://sewiki.iai.uni-bonn.de/teaching/lectures/kga/2017/slides
+
+
+-- Event detection: 
+
+Keyword extraction:  NLP keyword extraction tutorial with RAKE and Maui - AirPair
+
+dependency labels
+
+-- Topic model
+
+
+
+---- for data science course
+
+
+sentiment diffusion
+
+news summarization and recommendation
+
+
+
+---- Probabilistic Bayesian learning: temporal mixtures
+
+
+---- Multi-modal multi-view learning
+ 
+
+---- semi-supervised
+
+
+---- multitask learning.
+
+
+---- Tutorials:
+
+
+ijcai 2018 generative model
+
+https://drive.google.com/file/d/1uwvXkKfrOjYsRKLO7RK4KbvpWmu_YPN_/view
+
+
+kdd 2018 Graph and Tensor Mining for Fun and Profit
+
+http://www.cs.cmu.edu/~christos/TALKS/18-08-KDD-tut/
+ 
+
+
+

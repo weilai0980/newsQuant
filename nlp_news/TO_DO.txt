@@ -1,0 +1,82 @@
+-------- Finished
+
+title, time, location, full text, entity list, iso-language, category
+
+filter empty text
+
+entity from title
+
+merge title and text
+
+locate all entities 
+
+sentence segments
+
+sentence objects
+
+entity - object relation, sentiment
+
+entity - crypto related and position
+
+lemmatization
+
+stem lemma
+
+entity specific sentiment
+
+filter out too short news 
+time zone seems to be converted to CEST
+no entity, remove 
+
+scikit learn text pre-processing for model training
+
+Pre-processing
+
+-------- To do
+
+spacy entity, sentiment
+
+
+Embedding
+
+Keyphrase
+
+Dependency parsing: subject, object analysis 
+
+Relation
+
+
+
+
+Data sources
+
+  https://twitter.com/mike_orcutt/lists/blockchain?utm_source=MIT+Technology+Review&utm_campaign=c7bcc6463f-EMAIL_CAMPAIGN_2018_02_27_COPY_01&utm_medium=email&utm_term=0_997ed6f472-c7bcc6463f-154264437
+  
+  https://cryptopanic.com/ 
+  
+  https://cryptopanic.com/news?filter=hot
+  
+  https://faws.com/
+  
+
+Entity 
+   
+  stem: e.g. ETF, ETFs 
+  entity relation
+  entity resolution
+  
+  entity filtering
+  entity inclusion
+  
+  
+  
+News:
+ urgent news
+
+ middle term news
+
+ long-term news 
+
+----
+
+

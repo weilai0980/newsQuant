@@ -1,0 +1,35 @@
+<%- include("header") %>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<div id="container">
+</div>
+<script>
+	window.onload = () => {
+		let handle = canvasRealtime("container",
+			"Latest tweets",
+			100, [
+				"3-second update",
+				"Dummy 3-second update"
+			]);
+		let socket = io("/twitter_data");
+		socket.on("twitter_counts", (counts) => {
+			console.log("got counts: " + JSON.stringify(counts, null, 2));
+			if(counts.length > 5) {
+				canvasRealtimeReset(handle, 0);
+			}
+			canvasRealtimeUpdate(handle,
+				0,
+				counts.map((count) => ({ x: new Date(count.date), y: count.count })));
+		});
+		socket.on("dummy_twitter_counts", (counts) => {
+			console.log("got dummy counts: " + JSON.stringify(counts, null, 2));
+			if(counts.length > 5) {
+				canvasRealtimeReset(handle, 1);
+			}
+			canvasRealtimeUpdate(handle,
+				1,
+				counts.map((count) => ({ x: new Date(count.date), y: count.count })));
+		});
+	};
+</script>
+<%- include("footer") %>

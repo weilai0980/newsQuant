@@ -1,0 +1,100 @@
+BTC, Bitcoin
+ETH, Ethereum
+XRP, Ripple
+BCH, Bitcoin Cash
+EOS, EOS
+LTC, Litecoin
+ADA, Cardano
+XLM, Stellar
+MIOTA, IOTA
+TRX, TRON
+NEO, NEO
+XMR, Monero
+DASH, Dash
+USDT, Tether
+XEM, NEM
+VEN, VeChain
+BNB, Binance Coin
+ETC, Ethereum Classic
+QTUM, Qtum
+ONT, Ontology
+OMG, OmiseGO
+BCN, Bytecoin
+ICX, ICON
+LSK, Lisk
+ZEC, Zcash
+ZIL, Zilliqa
+BTG, Bitcoin Gold
+AE, Aeternity
+DCR, Decred
+ZRX, 0x
+BTM, Bytom
+STEEM, Steem
+XVG, Verge
+BTS, BitShares
+RHOC, RChain
+SC, Siacoin
+NANO, Nano
+MKR, Maker
+GNT, Golem
+WAN, Wanchain
+PPT, Populous
+BCD, Bitcoin Diamond
+STRAT, Stratis
+WAVES, Waves
+BTCP, Bitcoin Private
+DOGE, Dogecoin
+REP, Augur
+IOST, IOST
+WTC, Waltonchain
+DGB, DigiByte
+SNT, Status
+NAS, Nebulas
+HSR, Hshare
+WICC, WaykiChain
+XIN, Mixin
+AION, Aion
+DGD, DigixDAO
+HT, Huobi Token
+LRC, Loopring
+BAT, Basic Attention Token
+KMD, Komodo
+ELF, aelf
+ARK, Ark
+ARDR, Ardor
+CMT, CyberMiles
+GXS, GXChain
+PIVX, PIVX
+MAID, MaidSafeCoin
+BNT, Bancor
+DCN, Dentacoin
+LOOM, Loom Network
+MOAC, MOAC
+ELA, Elastos
+CNX, Cryptonex
+MONA, MonaCoin
+SKY, Skycoin
+GAS, Gas
+KNC, Kyber Network
+CTXC, Cortex
+MITH, Mithril
+POLY, Polymath
+SYS, Syscoin
+RDD, ReddCoin
+QASH, QASH
+VERI, Veritaseum
+ETHOS, Ethos
+FSN, Fusion
+FUN, FunFair
+THETA, Theta Token
+CENNZ, Centrality
+NULS, Nuls
+SUB, Substratum
+NXS, Nexus
+ENG, Enigma
+DRGN, Dragonchain
+KIN, Kin
+NXT, Nxt
+ETN, Electroneum
+BIX, Bibox Token
+SOC, All Sports

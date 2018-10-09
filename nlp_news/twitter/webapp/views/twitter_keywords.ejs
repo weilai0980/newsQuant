@@ -1,0 +1,169 @@
+<%- include("header") %>
+<script src="/socket.io/socket.io.js"></script>
+<div ng-app="app" ng-controller="ctrl">
+	<div class="container mt-5">
+  		<div class="row text-left">
+  			<div class="col-sm">
+				<h3>Monitoring cryptocurrencies Twittersphere</h3>
+				<p>This is a Twitter streaming dashboard for monitoring sentiment and keywords on newly published Tweets. For more information check our <a href="https://github.com/DS3Lab/CDteam1" >Github page</a> and an official page of <a href="https://www.cryptodatathon.com/">Cryptodatathon 2018</a>.</p>
+				<p>To start, select the cryptocurrencies for which you want to retrieve the data:</p>
+				<form>
+					<span ng-repeat="keyword in availableKeywords">
+						<label for="{{keyword}}">
+							<input type="checkbox" ng-model="enabledKeywords[keyword]" name="group" id="{{ keyword }}" />
+							{{ keyword }}
+						</label>
+					</span>
+				</form>
+			</div>
+		</div>
+
+		<div id="containers">
+		</div>
+
+	</div>
+</div>
+<script>
+	class LineChart {
+		constructor(id, title, yLabel, dataLen) {
+			this.id = id;
+			this.title = title;
+			this.yLabel = yLabel;
+			this.dataLen = dataLen || 100;
+		}
+
+		setDataSeries(seriesNames, nameToLegend) {
+			let data = new Array();
+			nameToLegend = nameToLegend || ((name) => name);
+			for(let seriesName in seriesNames) {
+				if(!seriesNames[seriesName]) {
+					continue;
+				}
+				//console.log("adding " + seriesName + " to plot");
+				data.push({
+					name: seriesName,
+		            type: "line",
+		            legendText: nameToLegend(seriesName),
+		            showInLegend: true,
+		            dataPoints: new Array(),
+		            xValueFormatString: "YYYY-MM-DD HH:mm:ss",
+				});
+			}
+			this.chart = new CanvasJS.Chart(this.id, {
+		        title: {
+		            text: this.title,
+		            fontWeight: "lighter",
+		            fontSize: 20,
+		            fontStyle: "normal",
+		            fontFamily: "Tahoma"
+		        },
+		        axisY: {
+		        	title: this.yLabel,
+		            includeZero: false,
+		            gridDashType: "dot"
+		        },      
+		        data: data,
+		    });
+			this.chart.render();
+		}
+
+		addDataPoints(seriesName, points) {
+			let dps = null;
+			//console.log("addDataPoints to " + seriesName + ": " + JSON.stringify(points, null, 2));
+			for(let series of this.chart.data) {
+				if(series.name == seriesName) {
+					dps = series.dataPoints;
+					break;
+				}
+			}
+			if(!dps) {
+				return;
+			}
+			dps.push.apply(dps, points);
+			dps.splice(0, dps.length - this.dataLen);
+			this.chart.render();
+		}
+	}
+
+	var app = angular.module("app", []);
+	app.controller("ctrl", function($scope) {
+		// Frequencies
+		let frequencies = <%- JSON.stringify(frequencies) %>;
+		let containers = document.querySelector("#containers");
+		for(let frequency in frequencies) {
+			containers.innerHTML += '<div class="row text-left">\
+				<div class="col-sm">\
+					<div id="container_count_' + frequency + '" class="chartContainer"></div>\
+				</div>\
+			</div>';
+			containers.innerHTML += '<div class="row text-left">\
+				<div class="col-sm">\
+					<div id="container_sentiment_' + frequency + '" class="chartContainer"></div>\
+				</div>\
+			</div>';
+		}
+
+		// Socket.IO
+		let socket = io("/twitter_data");
+		socket.on("available_keywords", (keywords) => {
+			$scope.availableKeywords = keywords;
+			$scope.$apply();
+		});
+		/*socket.on("twitter_keyword_bitcoin", (results) => {
+			console.log("received something: " + JSON.stringify(results, null, 2));
+		});*/
+
+		// Angular controller
+		$scope.someText = "Lorem ipsum";
+		$scope.availableKeywords = [ "word1" ];
+		$scope.enabledKeywords = {};
+		$scope.$watch("enabledKeywords", (newValue, oldValue) => {
+			// Update keyword request
+			let seriesNames = {};
+			for(let keyword in newValue) {
+				for(let frequency in frequencies) {
+					seriesNames["twitter_keyword_" + keyword + "_" + frequency] = newValue[keyword];
+				}
+			}
+			socket.emit("request_series", seriesNames);
+			// Update chart
+			for(let frequency in frequencies) {
+				let filtered = {};
+				for(let seriesName in seriesNames) {
+					if(seriesName.split("_").slice(-1)[0] == frequency) {
+						filtered[seriesName] = seriesNames[seriesName];
+					}
+				}
+				let nameToLegend = ((name) => name.split("_")[2]);
+				chartsCount[frequency].setDataSeries(filtered, nameToLegend);
+				chartsSentiment[frequency].setDataSeries(filtered, nameToLegend);
+			}
+
+			for(let seriesName in seriesNames) {
+				if(!seriesNames[seriesName]) {
+					continue;
+				}
+				socket.off(seriesName);
+				((seriesName) => {
+				socket.on(seriesName, (data) => {
+					console.log("got data for series " + seriesName + ": " + JSON.stringify(data, null, 2));
+					let frequency = seriesName.split("_").slice(-1)[0];
+					let chartCount = chartsCount[frequency];
+					let chartSentiment = chartsSentiment[frequency];
+					chartCount.addDataPoints(seriesName, data.map((obj) => ({ x: new Date(obj.date), y: obj.count })));
+					chartSentiment.addDataPoints(seriesName, data.map((obj) => ({ x: new Date(obj.date), y: obj.avg_sentiment_score })));
+				});
+				})(seriesName);
+			}
+		}, true);
+
+		// Charts
+		let chartsCount = {};
+		let chartsSentiment = {};
+		for(let frequency in frequencies) {
+			chartsCount[frequency] = new LineChart("container_count_" + frequency, "Tweet volume (" + frequencies[frequency] + ")", "Volume", 100);
+			chartsSentiment[frequency] = new LineChart("container_sentiment_" + frequency, "Sentiment score (" + frequencies[frequency] + ")", "Sentiment score", 100);
+		}
+	});
+</script>
+<%- include("footer") %>

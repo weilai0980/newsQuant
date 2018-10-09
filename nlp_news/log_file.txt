@@ -1,0 +1,94 @@
+
+ -- Start to read update in RSS: 
+
+ ----- read RSS for a new day: 29 
+updating process... : 0 
+amount of news so far : 87 
+processing time : 134 
+
+ ----- read RSS for a new day: 03 
+
+ ----- read RSS for a new day: 03 
+
+ ----- read RSS for a new day: 03 
+
+ ----- read RSS for a new day: 03 
+
+ ----- read RSS for a new day: 03 
+
+ ----- read RSS for a new day: 03 
+
+ ----- read RSS for a new day: 03 
+
+ ----- read RSS for a new day: 03 
+updating process... : 0 
+ ! Problematic page, no text extracted, continuing... : http://www.dailymail.co.uk/money/news/article-6080099/Are-Monzo-Revolut-Starling-Transferwise-safe-bank-with.html?ns_mchannel=rss&ito=1490&ns_campaign=1490 
+
+ ----- read RSS for a new day: 03 
+
+ ----- read RSS for a new day: 03 
+
+ ----- read RSS for a new day: 03 
+amount of news so far : 0 
+processing time : 0 
+
+ -- Start to read update in RSS: 
+amount of news so far : 0 
+processing time : 0 
+
+ -- Start to read update in RSS: 
+
+ -- Start to read update in RSS: 
+
+ -- Start to read update in RSS: 
+
+ -- Start to read update in RSS: 
+
+ -- Start to read update in RSS: 
+
+ -- Start to read update in RSS: 
+
+ -- Start to read update in RSS: 
+updating process... : 0 
+
+ -- Start to read update in RSS: 
+
+ -- Start to read update in RSS: 
+
+ -- Start to read update in RSS: 
+updating process... : 0 
+ ! Problematic page, no text extracted, continuing... : https://www.powerengineeringint.com/articles/2018/09/power-gen-asia-special-market-report-is-out-now.html 
+ ! Problematic page, no text extracted, continuing... : http://thainews.prd.go.th/website_en/news/news_detail/WNECO6109030010012 
+amount of news so far : 89 
+processing time : 151 
+
+ -- Start to read update in RSS: 
+updating process... : 0 
+ ! Problematic page, no text extracted, continuing... : https://news2.onlinenigeria.com/news/general/761540-uses-of-itunes-gift-card.html 
+amount of news so far : 95 
+processing time : 37 
+
+ -- Start to read update in RSS: 
+updating process... : 0 
+amount of news so far : 99 
+processing time : 7 
+
+ -- Start to read update in RSS: 
+updating process... : 0 
+amount of news so far : 101 
+processing time : 4 
+
+ ----- read RSS for a new day: 03 
+updating process... : 0 
+
+ ----- read RSS for a new day: 03 
+
+ ----- read RSS for a new day: 03 
+
+ ----- read RSS for a new day: 03 
+
+ ----- read RSS for a new day: 03 
+updating process... : 0 
+ ! Problematic page, no text extracted, continuing... : http://eng.belta.by/economics/view/eurasian-week-to-discuss-topical-issues-of-eurasian-integration-114446-2018/ 
+ ! Problematic page, no text extracted, continuing... : https://news2.onlinenigeria.com/news/general/761540-uses-of-itunes-gift-card.html 
+ ! Problematic page, no text extracted, continuing... : https://www.powerengineeringint.com/articles/2018/09/power-gen-asia-special-market-report-is-out-now.html 

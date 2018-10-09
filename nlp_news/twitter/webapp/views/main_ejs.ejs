@@ -1,0 +1,15 @@
+<%- include("header") %>
+		<h1>Main title</h1>
+		<div id="container">
+		<% plots.forEach((plot) => { %>
+			<div id="chart<%= plot.id %>">
+				<h2 class="chart-title"></h2>
+				<div class="chart"></div>
+			</div>
+		<% }); %>
+		</div>
+		<script>
+			plotAll(<%- JSON.stringify(plots) %>)
+		</script>
+		<%- include("pagination"); %>
+<%- include("footer") %>
